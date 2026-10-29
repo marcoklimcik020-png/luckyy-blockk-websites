@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090914">
+<meta name="description" content="Enter Luckyy Blockk Drill Modee, a Roblox game. Break blocks, drill forward, and see what you discover!">
+<title>Luckyy Blockk Drill Modee | Roblox</title>
+<style>
+  :root { --bg:#090914; --panel:#131326; --purple:#8b5cf6; --cyan:#38e8ff; --yellow:#ffe45e; --text:#f7f7ff; --muted:#b8b8d0; }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; color:var(--text); background:radial-gradient(ellipse at 15% 0%, #28205a 0, transparent 42%), radial-gradient(ellipse at 90% 35%, #112d4b 0, transparent 36%), var(--bg); font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; }
+  a { color:inherit; }
+  .wrap { width:min(1120px,92%); margin:auto; }
+  header { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:22px 0; }
+  .brand { display:flex; align-items:center; gap:12px; font-weight:900; letter-spacing:.3px; }
+  .logo { display:grid; place-items:center; width:44px; height:44px; border-radius:13px; background:linear-gradient(135deg,var(--yellow),#ff9d2f); color:#171326; font-size:24px; box-shadow:0 0 28px #ffce4a55; }
+  nav { display:flex; gap:22px; color:var(--muted); font-size:14px; }
+  nav a { text-decoration:none; } nav a:hover { color:var(--cyan); }
+  .hero { min-height:610px; display:grid; grid-template-columns:1.05fr .95fr; align-items:center; gap:30px; padding:55px 0 75px; }
+  .eyebrow { display:inline-flex; gap:8px; align-items:center; border:1px solid #8b5cf666; background:#8b5cf61c; color:#d9caff; padding:8px 13px; border-radius:999px; font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:1.4px; }
+  h1 { font-size:clamp(42px,6.4vw,76px); line-height:.98; letter-spacing:-3px; margin:22px 0 20px; }
+  h1 span { display:block; color:var(--yellow); text-shadow:0 0 28px #ffce4a40; }
+  .lead { max-width:570px; color:var(--muted); font-size:17px; line-height:1.7; }
+  .actions { display:flex; flex-wrap:wrap; gap:13px; margin-top:28px; }
+  .btn { display:inline-flex; align-items:center; justify-content:center; gap:10px; border-radius:14px; padding:15px 21px; font-weight:900; text-decoration:none; transition:transform .2s,filter .2s; }
+  .btn:hover { transform:translateY(-3px); filter:brightness(1.1); }
+  .primary { color:#10101b; background:linear-gradient(100deg,var(--yellow),#ffb340); box-shadow:0 8px 30px #ffcc4540; }
+  .secondary { border:1px solid #ffffff24; background:#ffffff0a; }
+  .art { position:relative; min-height:390px; display:grid; place-items:center; }
+  .orb { position:absolute; width:330px; height:330px; border-radius:50%; background:linear-gradient(135deg,#7c3aed55,#22d3ee30); filter:blur(2px); box-shadow:0 0 90px #8055ff30; }
+  .block { position:relative; width:min(300px,78vw); aspect-ratio:1; transform:rotate(-7deg); border:3px solid #fff7a1; border-radius:30px; background:linear-gradient(145deg,#ffe976,#ffb51f 65%,#ed7b13); box-shadow:inset 0 0 0 12px #fff2a833, 0 28px 70px #0009, 0 0 70px #ffc83f55; display:grid; place-items:center; }
+  .block:before { content:""; position:absolute; inset:18px; border:2px solid #fff8c466; border-radius:20px; }
+  .question { color:#fffdf0; font-size:clamp(130px,20vw,210px); line-height:1; font-weight:1000; text-shadow:5px 8px 0 #d66c12, 0 0 22px #fff; }
+  .mini { position:absolute; display:grid; place-items:center; width:75px; height:75px; border-radius:19px; font-size:36px; border:2px solid #ffffff70; box-shadow:0 15px 35px #0008; }
+  .mini.one { top:26px; right:10px; background:linear-gradient(135deg,#6d5bff,#3820a7); transform:rotate(12deg); }
+  .mini.two { bottom:20px; left:0; background:linear-gradient(135deg,#35e8ff,#087fbd); transform:rotate(-13deg); }
+  .mini.three { bottom:48px; right:0; background:linear-gradient(135deg,#ff70d4,#9c2eff); transform:rotate(9deg); }
+  .spark { position:absolute; color:var(--cyan); font-size:30px; animation:float 3s ease-in-out infinite; }
+  .s1 { left:8%; top:14%; } .s2 { right:8%; top:42%; animation-delay:.8s; color:var(--yellow); } .s3 { left:18%; bottom:12%; animation-delay:1.4s; }
+  @keyframes float { 50% { transform:translateY(-12px) rotate(12deg); } }
+  .stats { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:22px; max-width:510px; }
+  .stat { padding:15px; border:1px solid #ffffff14; border-radius:16px; background:#ffffff08; }
+  .stat strong { display:block; font-size:17px; } .stat small { color:var(--muted); font-size:12px; }
+  section { padding:58px 0; }
+  .section-head { text-align:center; max-width:680px; margin:0 auto 30px; }
+  .section-head h2 { font-size:clamp(29px,4vw,43px); margin:0 0 12px; letter-spacing:-1px; }
+  .section-head p { color:var(--muted); line-height:1.65; margin:0; }
+  .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:17px; }
+  .card { background:linear-gradient(145deg,#ffffff0d,#ffffff04); border:1px solid #ffffff14; padding:24px; border-radius:20px; }
+  .card .icon { display:grid; place-items:center; width:52px; height:52px; border-radius:15px; background:#8b5cf626; font-size:27px; margin-bottom:18px; }
+  .card h3 { margin:0 0 9px; font-size:19px; } .card p { color:var(--muted); line-height:1.65; margin:0; font-size:14px; }
+  .cta { margin:30px 0 70px; padding:38px; text-align:center; border-radius:26px; border:1px solid #8b5cf655; background:linear-gradient(120deg,#6d28d933,#0891b233); }
+  .cta h2 { margin:0 0 10px; font-size:clamp(28px,4vw,42px); } .cta p { color:var(--muted); margin:0 0 22px; }
+  footer { border-top:1px solid #ffffff12; padding:25px 0 35px; color:#9898b4; font-size:12px; display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; }
+  footer a { color:#c9c9e5; }
+  @media(max-width:760px) { nav { gap:12px; font-size:12px; } .hero { grid-template-columns:1fr; padding-top:35px; text-align:center; } .lead,.stats { margin-left:auto; margin-right:auto; } .actions { justify-content:center; } .art { min-height:330px; } .orb { width:270px;height:270px; } .block { width:235px; border-radius:24px; } .question { font-size:160px; } .mini { width:58px;height:58px;font-size:28px; } .cards { grid-template-columns:1fr; } .card { text-align:center; } .card .icon { margin-left:auto;margin-right:auto; } }
+  @media(max-width:430px) { .brand { font-size:13px; } .logo { width:38px;height:38px; } nav a:nth-child(2) { display:none; } h1 { letter-spacing:-2px; } .stats { gap:7px; } .stat { padding:11px 6px; } .stat strong { font-size:14px; } .stat small { font-size:10px; } .cta { padding:27px 17px; } }
+</style>
+</head>
+<body>
+<header class="wrap">
+  <a class="brand" href="#home" style="text-decoration:none"><span class="logo">?</span><span>LUCKYY BLOCKK</span></a>
+  <nav aria-label="Main navigation"><a href="#features">Features</a><a href="#about">About</a><a href="#play">Play</a></nav>
+</header>
+<main>
+  <section class="wrap hero" id="home">
+    <div>
+      <div class="eyebrow">⚡ Roblox game experience</div>
+      <h1>DRILL. BREAK.<span>DISCOVER.</span></h1>
+      <p class="lead">Welcome to <strong>Luckyy Blockk Drill Modee</strong>! Jump in, get drilling, and discover what your next block has waiting for you.</p>
+      <div class="actions">
+        <a class="btn primary" href="https://www.roblox.com/games/99861758734630/Luckyy-Blockk-Drill-Modee" target="_blank" rel="noopener noreferrer">▶ PLAY ON ROBLOX <span>↗</span></a>
+        <a class="btn secondary" href="#features">Explore the game ↓</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>⛏️ Drill</strong><small>Keep progressing</small></div>
+        <div class="stat"><strong>🟨 Lucky Blocks</strong><small>See what you find</small></div>
+        <div class="stat"><strong>🎮 Roblox</strong><small>Play the experience</small></div>
+      </div>
+    </div>
+    <div class="art" aria-label="Illustration of a glowing lucky block">
+      <div class="orb"></div><div class="spark s1">✦</div><div class="spark s2">✧</div><div class="spark s3">✦</div>
+      <div class="block"><span class="question">?</span></div>
+      <div class="mini one">⚡</div><div class="mini two">⛏️</div><div class="mini three">💎</div>
+    </div>
+  </section>
+  <section id="features">
+    <div class="wrap">
+      <div class="section-head"><h2>YOUR NEXT BLOCK IS WAITING</h2><p>Ready to jump into drill mode? Check out the core ideas behind the experience and then play on Roblox.</p></div>
+      <div class="cards">
+        <article class="card"><div class="icon">⛏️</div><h3>Drill Mode</h3><p>Get into the action and keep pushing forward through your block-breaking adventure.</p></article>
+        <article class="card"><div class="icon">🟨</div><h3>Lucky Blocks</h3><p>Every block brings a little mystery. Jump in and find out what your run has in store.</p></article>
+        <article class="card"><div class="icon">⚡</div><h3>Keep Progressing</h3><p>Play, explore, and see how far you can go in Luckyy Blockk Drill Modee.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="wrap" id="about">
+    <div class="cta" id="play">
+      <h2>READY TO PLAY?</h2>
+      <p>Open Luckyy Blockk Drill Modee on Roblox and join the adventure.</p>
+      <a class="btn primary" href="https://www.roblox.com/games/99861758734630/Luckyy-Blockk-Drill-Modee" target="_blank" rel="noopener noreferrer">PLAY THE GAME ↗</a>
+    </div>
+  </section>
+</main>
+<footer class="wrap"><span>© <span id="year">2026</span> Luckyy Blockk Drill Modee — Fan-made game website.</span><span>Not affiliated with or endorsed by Roblox Corporation.</span></footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
